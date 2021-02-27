@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs using html</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+    .window{
+        margin: auto;
+        width: 600px;
+        height: 410px;
+        border: 3px solid black;
+        margin-top: 100px;
+        background-color: purple;
+    }
+    .topbar{
+        display: inline-block;
+    }
+    .btn{
+        margin: 0px 0px;
+        width: 147px;
+        height: 45px;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        border: none;
+    }
+    #tab1{
+        background-color: purple;
+    }
+    .main{
+        height: 365px;
+        color: white;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="window">
+        <div class="topbar">
+            <button class="btn" id="tab1" onclick="btn1()">Tab-1</button>
+            <button class="btn" id="tab2" onclick="btn2()">Tab-2</button>
+            <button class="btn" id="tab3" onclick="btn3()">Tab-3</button>
+            <button class="btn" id="tab4" onclick="btn4()">Tab-4</button>
+        </div>
+        <div class="main" id="main">
+            This is first tab
+        </div>
+    </div>
+</body>
+<script>
+    function btn1(){
+        document.getElementById('tab1').style.backgroundColor="purple"
+        let varbtn1 = document.getElementById('main')
+        varbtn1.innerHTML= "This is first tab"
+
+        document.getElementById('tab2').style.backgroundColor="white"
+        document.getElementById('tab3').style.backgroundColor="white"
+        document.getElementById('tab4').style.backgroundColor="white"
+    }
+    function btn2(){
+        let varbtn2=document.getElementById('tab2')
+        varbtn2.style.backgroundColor="purple"
+        let mainbtn=document.getElementById('main')
+        mainbtn.innerHTML="This is second tab"
+
+        document.getElementById('tab1').style.backgroundColor="white"
+        document.getElementById('tab3').style.backgroundColor="white"
+        document.getElementById('tab4').style.backgroundColor="white"
+    }
+    function btn3(){
+        let varbtn2=document.getElementById('tab3')
+        varbtn2.style.backgroundColor="purple"
+        let mainbtn=document.getElementById('main')
+        mainbtn.innerHTML="This is third tab"
+
+        document.getElementById('tab1').style.backgroundColor="white"
+        document.getElementById('tab2').style.backgroundColor="white"
+        document.getElementById('tab4').style.backgroundColor="white"
+    }
+    function btn4(){
+        let varbtn2=document.getElementById('tab4')
+        varbtn2.style.backgroundColor="purple"
+        let mainbtn=document.getElementById('main')
+        mainbtn.innerHTML="This is fourth tab"
+
+        document.getElementById('tab1').style.backgroundColor="white"
+        document.getElementById('tab3').style.backgroundColor="white"
+        document.getElementById('tab2').style.backgroundColor="white"
+    }
+</script>
+</html>
